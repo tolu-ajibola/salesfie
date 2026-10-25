@@ -1,0 +1,31 @@
+# Secrets — never commit
+.env
+.env.local
+*.pem
+
+# Runtime data stores (per-BD OAuth tokens are encrypted, but never commit them)
+data/oauth-tokens.json
+data/prep-runs.json
+data/bds.csv
+
+# Encrypted OAuth tokens (per-BD Google refresh tokens) — never commit
+data/oauth-tokens.json
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Local Claude Code settings (personal machine config, not project code)
+.claude/settings.local.json
